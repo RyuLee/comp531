@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="Pengyu Li">
+	<meta charset="utf-8">
+	<title>Pizzahot</title>
+	<script type="text/javascript">
+		function validateForm(form){
+			form = document.getElementById("order");
+			var radioCheck = false;
+			for(var i = 0; i < form.size.length; i++){
+				if(form.size[i].checked == true){
+					radioCheck = true;
+					break;
+				}
+			}
+			if(!radioCheck){
+				div = document.getElementById("warning");
+				div.innerHTML = "<p>You should choose at least one size";
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+<body>
+<h1 align="center">Pizza Guys Order Form</h1>
+<p align="center"><img src="pizza.jpg" style="width:300px;height:220px;"></p>
+<div>
+	<form id="order">
+		<p>
+			Name: <br>
+			<input type="text" name="name" placeholder="Yours Name" required>
+		</p>
+		<p>
+			Address:#### Street Number: <br>
+			<input type="text" name="address" placeholder="Delivery Address" required>
+		</p>
+		<p>
+			Phone Number:123-123-1234: <br>
+			<input type="tel" name="phone" pattern="\d\d\d-\d\d\d-\d\d\d\d" placeholder="123-123-1234" required>
+		</p>
+		<p>
+			Pizza Size: <br>
+			<input type="radio" name="size" value="Large">Large &nbsp </input>
+			<input type="radio" name="size" value="Medium">Medium &nbsp </input>
+			<input type="radio" name="size" value="Small">Small &nbsp </input>
+			<div id="warning"></div>
+		</p>
+		<p>
+			Pizza Toppings: <br>
+			<input type="checkbox" name="topping" value="Sausage">Sausage &nbsp
+			<input type="checkbox" name="topping" value="Olives">Olives &nbsp
+			<input type="checkbox" name="topping" value="Anchovies">Anchovies &nbsp
+			<input type="checkbox" name="topping" value="Onions">Onions &nbsp
+		</p>
+		<p>
+			<input type="submit" name="submit" value="Place Order" onclick="return validateForm()">
+			<input type="reset" name="reset" value="clear">
+		</p>
+	</form>
+</div>
+</body>
+</html>
