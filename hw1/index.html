@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Pengyu Li">
+	<title>Landing Page</title>
+
+	<style type="text/css"></style>
+
+	<script type="text/javascript">
+		function getTimestamp(){
+			var currentTimestamp = new Date(document.lastModified).getTime();
+			var input = document.getElementById("in2");
+			input.value = currentTimestamp;
+		}
+		function formValidate(form){
+			getTimestamp();
+			if(!form){
+				form = document.getElementById("myForm");
+			}
+			for(var i = 0; i < form.length; i++){
+				if(form[i].name == "bday" && form[i].value != ""){
+					var bday = form[i].valueAsDate;
+					var date = new Date();
+					var timeDiff = date.getTime() - bday.getTime();
+					if(timeDiff > 0){
+						var diffYears = Math.ceil(timeDiff / (1000 * 3600 * 24 * 365));
+						if(diffYears < 18){
+							window.alert("You can't register under 18 years old!");
+							return false;
+						}else if(diffYears > 150){
+							window.alert("Please input valid date!");
+							bday.value = "";
+							return false;
+						}
+					}else {
+						window.alert("Please input valid date!");
+						bday.value = "";
+						return false;
+					}
+				}else if(form[i].name == "confirmation" && form[i].value != ""){
+					if(form[i-1].value != ""){
+						if(form[i-1].value != form[i].value){
+							window.alert("The password and password confirmation you entered are not the same！");
+							form[i].value = "";
+						}
+					}
+				}
+			}		
+		}
+	</script>
+</head>
+<body>
+<h1>Registration</h1>
+<div>
+<form id="myForm" method="GET" action="formProcessor.html">
+		<p>
+			Account Name:
+			<input type="username" name="account" placeholder="ABC123" pattern="^[a-zA-Z]+.*$" required></input>
+		</p>
+		<p>
+			Display Name(Optional):
+			<input type="text" name="name" placeholder="xxx"></input>
+		</p>
+		<p>
+			Email Address:
+			<input type="email" name="email" placeholder="abc@abc.com" required></input>
+		</p>
+		<p>
+			Phone:
+			<input type="tel" name="phone" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="123-123-1234" required></input>
+		</p>
+		<p>
+			Birthday:
+			<input id="in1" type="date" name="bday" required></input>
+		</p>
+		<p>
+			Zip Code:
+			<input type="number" name="zip" pattern="^\d{5}$" placeholder="00000" required></input>
+		</p>
+		<p>
+			Password:
+			<input type="password" name="password" pattern="^\w{5,12}$" required></input>
+		</p>
+		<p>
+			Password Confirmation: 
+			<input type="password" name="confirmation" pattern="^\w{5,12}$" required></input>	
+		</p>
+		<p><input id="in2" type="hidden" name="tstamp" value="default"></input></p>
+		<p>
+			<input type="submit" name="submit" value="Submit" onclick="return formValidate()"></input>
+			&nbsp
+			<input type="reset" name="clear" value="Clear"></input>
+		</p>
+	</form>
+<div>
+</body>
+</html>
