@@ -4,25 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Pengyu Li">
 	<title>Form Processor</title>
-	<script type="text/javascript">
-		function loadTable(){
-			var table = document.getElementById("myTable");
-			var query = window.location.search.substring(1).split('&');
-			table.rows[1].cells[1].innerText = query[0].split('=')[1];//Account
-			table.rows[2].cells[1].innerText = query[1].split('=')[1];//Display Name
-			table.rows[3].cells[1].innerText = decodeURIComponent(query[2].split('=')[1]);//Email
-			table.rows[4].cells[1].innerText = decodeURIComponent(query[3].split('=')[1]);//Phone
-			table.rows[5].cells[1].innerText = decodeURIComponent(query[4].split('=')[1]);//Birthday
-			table.rows[6].cells[1].innerText = query[5].split('=')[1];//Zip
-			table.rows[7].cells[1].innerText = decodeURIComponent(query[6].split('=')[1]);//Password
-			table.rows[8].cells[1].innerText = decodeURIComponent(query[7].split('=')[1]);//Password Confirmation
-			var date = new Date(parseInt(query[8].split('=')[1]));
-			table.rows[9].cells[1].innerText = date.toString();//Timestamp
-		}	
-	</script>
 </head>
 <body onload="loadTable()">
-<table id="myTable">
+<table id="myTable" border="1">
 	<tr>
 		<th>
 			Key
@@ -86,6 +70,21 @@
 		<td></td>
 	</tr>
 </table>
-
 </body>
+<script type="text/javascript">
+		function loadTable(){
+			var table = document.getElementById("myTable");
+			var query = window.location.search.substring(1).split('&');
+			table.rows[1].cells[1].innerText = query[0].split('=')[1];//Account
+			table.rows[2].cells[1].innerText = query[1].split('=')[1];//Display Name
+			table.rows[3].cells[1].innerText = decodeURIComponent(query[2].split('=')[1]);//Email
+			table.rows[4].cells[1].innerText = decodeURIComponent(query[3].split('=')[1]);//Phone
+			table.rows[5].cells[1].innerText = decodeURIComponent(query[4].split('=')[1]);//Birthday
+			table.rows[6].cells[1].innerText = query[5].split('=')[1];//Zip
+			table.rows[7].cells[1].innerText = decodeURIComponent(query[6].split('=')[1]);//Password
+			table.rows[8].cells[1].innerText = decodeURIComponent(query[7].split('=')[1]);//Password Confirmation
+			var date = new Date(parseInt(query[8].split('=')[1]));
+			table.rows[9].cells[1].innerText = date.toString();//Timestamp
+		}	
+</script>
 </html>
