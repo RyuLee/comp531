@@ -4,31 +4,12 @@
     <title>Hello HTML!</title>
     <meta charset="utf-8">
     <meta name="author" content="Pengyu Li">
-    <script type="text/javascript">
-    	function clearText(){
-    		var text = document.getElementsByTagName("textarea");
-    		text[0].value = "";
-    	}
-    	function timeout(){
-    		setTimeout(function(){
-    			window.alert("the page will redirect when the counter reaches zero");
-    			var timeLeft = 15;
-    			interval = setInterval(function(){
-    			var indicator = document.getElementById("indicator");
-    			indicator.innerHTML = timeLeft + "s";
-    			if(timeLeft<=0){
-    				clearInterval(interval);
-    				window.location.replace("http://www.clear.rice.edu/comp431/sample/hello.html");
-    			}
-    			timeLeft --;
-    			},1000);
-    		},5000);
-    	}
-    </script>
 </head>
 
 <body onload="timeout()">
 <span id="indicator"></span>
+<br></br>
+<div id="buttonDiv"></div>
 <table border="1">
 	<tr><td>Athenian</td><td>Owl</td></tr>
 	<tr><td colspan="2"><img src="http://explore.rice.edu/uploadedImages/Explore/Welcome_to_Rice/riceacademicseal1.jpg"></td></tr>
@@ -55,4 +36,43 @@
 <p>
 	<button onclick="clearText()">Clear</button>
 </p>
+</body>
+
+<script type="text/javascript">
+    var interval;
+    var timeLeft = 15;
+    var timerStart = false; // avoid invoking duplicated timers
+    function clearText(){
+        var text = document.getElementsByTagName("textarea");
+        text[0].value = "";
+    }
+    var timestep = function timeStep(){
+        var indicator = document.getElementById("indicator");
+        indicator.innerHTML = timeLeft + "s";
+        if(timeLeft<=0){
+            clearInterval(interval);
+            window.location.replace("http://www.clear.rice.edu/comp431/sample/hello.html");
+        }
+        timeLeft --;
+    }
+    function timeout(){
+        setTimeout(function(){
+            window.alert("the page will redirect when the counter reaches zero");
+            var buttons = document.getElementById("buttonDiv");
+            interval = setInterval(timestep,1000);
+            timerStart = true;
+            buttons.outerHTML = "<button onclick=\"pauseCounting()\">Pause</button> &nbsp <button onclick=\"resumeCounting(interval)\">Resume</button>";
+        },5000);
+    }
+    function pauseCounting(){
+            clearInterval(interval);
+            timerStart = false;
+        }
+    function resumeCounting(){
+        if(timerStart == false){
+        interval = setInterval(timestep,1000);
+        timerStart = true;
+        };
+    }
+    </script>
 
