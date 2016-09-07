@@ -20,28 +20,32 @@ window.onload = function(){
 		btn.style.left = getRandomInt(0,rect.width-btn_rect.width)+"px";
 	}
 	var reset = function(e){
-		if(btn.defaultValue == "Play Again!"){
 			e = e || window.event;
 			location.search = "";
+	}
+	updateText = function(b){
+		b.value = "Play Again!";
+	}
+	var keyup = function(e){
+		if(e.keyCode == 16){
+			btn.addEventListener("mouseover",escape);
 		}
-	}
-	btn.updateText = function(){
-		btn.value = "Play Again!";
-	}
+	};
 	var cong = function(e){
-
-		if(btn.defaultValue!="Play Again!"){
 			e = e || window.event;
 			playground.innerHTML = playground.innerHTML+"<div class=\"cong\"><p>Conguratuations!</p><p>You Won!</p></div>";
-			btn.updateText();
-			//alert(btn.value);
-			btn.addEventListener("click",reset,false);
-		}	
+			var btn = document.getElementById("btn");
+			updateText(btn);
+			btn.innerHTML = "Play Again";
+			var newBtn = btn.cloneNode(true);
+			btn.parentNode.replaceChild(newBtn, btn);			//alert(btn.value);
+			newBtn.addEventListener("click",reset,false);
+			return
 	}
 
 	
 
-	btn.addEventListener("click",cong,false);
+	btn.addEventListener("click",cong,true);
 	
 	btn.addEventListener("mouseover",escape,false);
 
@@ -54,9 +58,5 @@ window.onload = function(){
 
 	},false);
 
-	document.addEventListener("keyup",function(e){
-		if(e.keyCode == 16){
-			btn.addEventListener("mouseover",escape);
-		}
-	})
+	document.addEventListener("keyup",keyup,false);
 }
