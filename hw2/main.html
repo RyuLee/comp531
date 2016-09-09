@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Pengyu Li">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Main Page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+  	<script type="text/javascript" src="main.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <ul class="left hide-on-med-and-down">
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td>
+					<div class="col s4">
+						<div class="card teal">
+						<div class="card-content white-text">
+							<div class="text-area">
+							Aenean eget tortor et ipsum convallis convallis non sit amet massa. Donec nec vestibulum sem. Sed et est molestie, congue magna vitae, aliquet lacus. Ut in scelerisque ante. Curabitur ultricies est id consectetur suscipit. In ut lectus congue, dapibus lectus nec, hendrerit augue. Nullam dignissim pretium dictum. Fusce maximus condimentum orci at aliquet. Donec dictum eget leo non vehicula. Morbi consectetur dictum eros in rutrum. Sed quis rhoncus risus.						
+
+						</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="col s4">
+						<div class="card teal">
+						<div class="card-content white-text">
+							<div class="text-area">
+								Aenean eget tortor et ipsum convallis convallis non sit amet massa. Donec nec vestibulum sem. Sed et est molestie, congue magna vitae, aliquet lacus. Ut in scelerisque ante. Curabitur ultricies est id consectetur suscipit. In ut lectus congue, dapibus lectus nec, hendrerit augue. Nullam dignissim pretium dictum. Fusce maximus condimentum orci at aliquet. Donec dictum eget leo non vehicula. Morbi consectetur dictum eros in rutrum. Sed quis rhoncus risus.		
+							</div>
+						</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="col s4">
+						<div class="card teal">
+						<div class="card-content white-text">
+							<div class="text-area">
+								Aenean eget tortor et ipsum convallis convallis non sit amet massa. Donec nec vestibulum sem. Sed et est molestie, congue magna vitae, aliquet lacus. Ut in scelerisque ante. Curabitur ultricies est id consectetur suscipit. In ut lectus congue, dapibus lectus nec, hendrerit augue. Nullam dignissim pretium dictum. Fusce maximus condimentum orci at aliquet. Donec dictum eget leo non vehicula. Morbi consectetur dictum eros in rutrum. Sed quis rhoncus risus.		
+							</div>
+						</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="col s4">
+						<div class="card teal">
+						<div class="card-content white-text">
+							<div class="text-area">
+								Aenean eget tortor et ipsum convallis convallis non sit amet massa. Donec nec vestibulum sem. Sed et est molestie, congue magna vitae, aliquet lacus. Ut in scelerisque ante. Curabitur ultricies est id consectetur suscipit. In ut lectus congue, dapibus lectus nec, hendrerit augue. Nullam dignissim pretium dictum. Fusce maximus condimentum orci at aliquet. Donec dictum eget leo non vehicula. Morbi consectetur dictum eros in rutrum. Sed quis rhoncus risus.		
+							</div>
+						</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="col s4">
+						<div class="card">
+						<div class="card-img">
+							<img id="img1" src="1.jpg"></img>
+							<div class="card-content">
+				              <p>Image Gallery 1.</p>
+				            </div>
+				            <div class="card-action">
+				            <button id="img1Pause" type="button" name="resume" onclick="pausingImg(0)" class="waves-effect waves-light btn">Stop</button>
+				            <button id="img2Resume" type="button" name="resume" onclick="changingImg(0)" class="waves-effect waves-light btn">Start</button>
+				            </div>
+						</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="col s4">
+						<div class="card">
+						<div class="card-img">
+							<img id="img2" src="2.jpg"></img>
+							<div class="card-content">
+				              <p>Image Gallery 2.</p>
+				            </div>
+				            <div class="card-action">
+				            <button id="img2Pause" type="button" onclick="pausingImg(1)" class="waves-effect waves-light btn">Stop</button>
+				            <button id="img2Resume"type="button" name="resume" onclick="changingImg(1)" class="waves-effect waves-light btn">Start</button>
+						</div>
+						</div>
+					</div>
+				</td>
+			</tr>	
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

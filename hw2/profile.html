@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Profile Page</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Pengyu Li">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="style.css"></link>
+  	<script type="text/javascript" src="profile.js"></script>
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <ul class="left hide-on-med-and-down">
+          <li><a href="main.html">Feed</a></li>
+        </ul>
+      </div>
+    </nav>
+</div>
+
+<div class="row">
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="name" type="text" class="validate" placeholder="Should be mix of digit and word" ></input><div id="name_value">RyuLee</div>
+      <label for="icon_prefix">Display Name</label>
+    </div>
+    <div class="input-field col s6">
+      <input id="email" type="email" class="validate" placeholder="abc@abc.com"></input>
+      <div id="email_value">ryulee2014@gmail.com</div>
+      <label for="icon_telephone">Email Address</label>
+    </div>
+  </div>
+ </div>
+     </nav>
+</div>
+
+<div class="row">
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="tel" type="text" class="validate" placeholder="xxx-xxx-xxxx">
+      </input>
+      <div id="tel_value">346-813-6257</div>
+      <label for="icon_prefix">Telephone</label>
+    </div>
+    <div class="input-field col s6">
+      <input id="zipcode" type="text" class="validate" placeholder="00000"></input>
+      <div id="zipcode_value">77005</div>
+      <label for="icon_telephone">Zipcode</label>
+    </div>
+  </div>
+ </div>
+
+<div class="row">
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="pwd" type="password" class="validate">
+      <label for="icon_prefix">Password</label>
+    </div>
+    <div class="input-field col s6">
+      <input id="pwdc" type="password" class="validate">
+      <label for="icon_telephone">Password Confirmation</label>
+    </div>
+  </div>
+ </div>
+<div class="row">
+	<input type="button" onclick="return validate()" class="waves-effect waves-light btn" value="Update"></input>
+</div>
+
+</body>
+</html>
