@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Pengyu Li">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="body-main">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">RiceBook</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="#" class="tooltipped" data-activates="slide-out" id="sideNav" data-position="bottom" data-delay="50" data-tooltip="Side Bar"><i class="material-icons">toc</i></a></li>
+                    <li><a href="#modal1" class="modal-trigger tooltipped" data-activates="slide-out" data-position="bottom" data-delay="50" data-tooltip="Post Articles"><i class="material-icons">textsms</i></a></li>
+                    <li><a href="#modal2" class="modal-trigger tooltipped" data-activates="slide-out" data-position="bottom" data-delay="50" data-tooltip="Upload Images"><i class="material-icons">videocam</i></a></li>
+                    <li><a href="index.html" class="tooltipped" data-activates="slide-out" data-position="bottom" data-delay="50" data-tooltip="Logout"><i class="material-icons">power_settings_new</i></a></li>
+                </ul>
+                <form class="search-bar">
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">closed</i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <img class="background" src="images/material1.jpg">
+                <a href="#!user"><img class="circle" src="images/avatar.jpg"></a>
+                <form action="#">
+                    <div class="file-field input-field">
+                        <div class="btn" style="vertical-align: middle;width: 60px;height: 30px;text-align: center;line-height: 30px;margin-right: 10px;margin-top: 10px;margin-left: 8px;">
+                            <span style="font-size:12px">Upload</span>
+                            <input type="file" style="height:30px;width:60px"></input>
+                        </div>
+                    </div>
+                </form>
+                <a href="#!name"><span class="white-text name">Pengyu Li</span></a>
+                <a href="#!email"><span class="white-text email">ryulee2014@gmail.com</span></a>
+            </div>
+        </li>
+        <li>
+            <div style="height:150px">
+                <i class="material-icons" style="padding-top:1em;vertical-align:text-bottom;margin-left:15px;">forum</i>
+                <div id="activityDisplay" style="position: relative;margin-left: 4em;top: -52px;">I love Material Design!</div>
+                <input id="activity" style="position: relative;margin-left: 4em;width: 70%;top: -60px;" type="text" name="" value="" placeholder="Your activities"></input>
+                <button id="updateAct" type="button" class="waves-effect waves-light btn-flat" style="margin-left:20em;font-size:10px;position:relative;top:-70px" onclick="updateAct()">Update</button>
+            </div>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Personal</a></li>
+        <li>
+            <a class="waves-effect" href="profile.html"><i class="material-icons">perm_identity</i>Profile</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Social Network</a></li>
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">perm_identity</i>Friends</div>
+                <div class="collapsible-body">
+                    <button class="btn-floating btn waves-effect waves-light" style="margin-top:1em;margin-left:2.4em;margin-bottom:5px"><i class="material-icons" style="position:relative;right:7px">add</i></button><input style="position: relative;left: 20px;width: 40%;" type="text" placeholder="Add Firends">
+                    <div class="divider"></div>
+                    <a><img class="circle" style="height:40px;width:40px;vertical-align:middle" src="images/avatar.jpg"><span>Pengyu Li</span></a>
+                    <span style="margin-left:2.5em;margin-bottom:10px"> I love Javascript!</span><button class="btn-flat waves-effect waves-light" style="position:relative;">Unfollow</button>
+                    <div class="divider"></div>
+                    <a><img class="circle" style="height:40px;width:40px;vertical-align:middle" src="images/avatar.jpg"><span>Pengyu Li</span></a>
+                    <span style="margin-left:2.5em;margin-bottom:10px"> I love PHP!</span><button class="btn-flat waves-effect waves-light" style="position:relative;left:35px">Unfollow</button>
+                    <div class="divider"></div>
+                    <a><img class="circle" style="height:40px;width:40px;vertical-align:middle" src="images/avatar.jpg"><span>Pengyu Li</span></a>
+                    <span style="margin-left:2.5em;margin-bottom:10px"> I love C#!</span><button class="btn-flat waves-effect waves-light" style="position:relative;left:45px">Unfollow</button>
+                    <div class="divider"></div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">person_pin</i>Family</div>
+            </li>
+        </ul>
+    </ul>
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <input id="title" type="text" name="title" value="" placeholder="Titles Here">
+            <textarea id="textarea1" class="materialize-textarea" style="margin-top:150px" placeholder="Contents Here"></textarea>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="waves-effect waves-green btn-flat " onclick="clearText()">Clear</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat " onclick="clearText()">Post</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat " onclick="clearText()">Cancel</a>
+        </div>
+    </div>
+    <div id="modal2" class="modal modal-fixed-footer" style="height:30%">
+        <div class="modal-content">
+            <form action="#">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Upload</span>
+                        <input type="file" style="height:50px;width:80px"></input>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="waves-effect waves-green btn-flat " onclick="clearText()">Clear</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat " onclick="clearText()">Post</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat " onclick="clearText()">Cancel</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m7 l2"></div>
+        <div class="col s12 m7 l4">
+            <div class="card white">
+                <div class="card-content">
+                    <span class="card-title">Thank you for registeration!</span>
+                    <p>Thank you for registering RiceBook. We welcome you to join our community!</p>
+                </div>
+                <div class="card-action" style="padding:2px 2px 2px 2em">
+                    Author: Pengyu Li &nbsp &nbsp Time: Sep 16 2016
+                </div>
+                <div class="card-action">
+                    <button id="img2Pause" type="button" class="waves-effect waves-light btn-flat">Comment</button>
+                    <button id="img2Resume" type="button" name="resume" class="waves-effect waves-light btn-flat">Edit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m7 l4">
+            <div class="card white">
+                <div class="card-image">
+                    <img class="materialboxed" src="images\RiceU.jpg">
+                    <span class="card-title">Rice University</span>
+                </div>
+                <div class="card-content">
+                    <p class="card-img-text">William Marsh Rice University, commonly referred to as Rice University or Rice, is a private research university located on a 295-acre (1.19 km2) campus in Houston, Texas, United States. The university is situated near the Houston Museum District and is adjacent to the Texas Medical Center. Rice is generally considered the top university and the most selective institute of higher education in the state of Texas.</p>
+                </div>
+                <div class="card-action" style="padding:2px 2px 2px 2em">
+                    Author: Pengyu Li &nbsp &nbsp Time: Sep 16 2016
+                </div>
+                <div class="card-action">
+                    <button type="button" class="waves-effect waves-light btn-flat">Comment</button>
+                    <button type="button" name="resume" class="waves-effect waves-light btn-flat">Edit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m7 l2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m7 l2"></div>
+        <div class="col s12 m7 l4">
+            <div class="card white">
+                <div class="card-image">
+                    <img class="materialboxed" src="images\houston.jpg">
+                    <span class="card-title">Houston</span>
+                </div>
+                <div class="card-content">
+                    <p class="card-img-text">Houston (Listeni/ˈhjuːstən/ hyoo-stən) is the most populous city in Texas and the fourth-most populous city in the United States, located in Southeast Texas near the Gulf of Mexico. With a census-estimated 2014 population of 2.239 million[5] within a land area of 599.6 square miles (1,553 km2),[6] it also is the largest city in the Southern United States,[7] as well as the seat of Harris County. It is the principal city of Houston–The Woodlands–Sugar Land, which is the fifth-most populated metropolitan area in the United States.</p>
+                </div>
+                <div class="card-action" style="padding:2px 2px 2px 2em">
+                    Author: Pengyu Li &nbsp &nbsp Time: Sep 16 2016
+                </div>
+                <div class="card-action">
+                    <button type="button" class="waves-effect waves-light btn-flat">Comment</button>
+                    <button type="button" name="resume" class="waves-effect waves-light btn-flat">Edit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m7 l4">
+            <div class=" card white">
+                <div class="card-content ">
+                    <span class="card-title ">World Class Research</span>
+                    <p class="card-text ">At Rice’s founding more than 100 years ago, no one could foresee the amazing discoveries to come, like Buckyballs, nanotechnology and artificial hearts. For the past century, Rice faculty and graduates have been honored with Nobel and Pulitzer prizes, Academy Awards, National Medals of Science and more. While it’s impossible to know what will be discovered during Rice’s next 100 years, one thing is certain—the unconventional wisdom that is Rice assures that amazing things will happen.</p>
+                </div>
+                <div class="card-action" style="padding:2px 2px 2px 2em">
+                    Author: Pengyu Li &nbsp &nbsp Time: Sep 16 2016
+                </div>
+                <div class="card-action ">
+                    <button type="button " class="waves-effect waves-light btn-flat ">Comment</button>
+                    <button type="button " name="resume " class="waves-effect waves-light btn-flat ">Edit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m7 l2 "></div>
+    </div>
+    <div class="row">
+        <div class="col s12 m7 l2 "></div>
+        <div class="col s12 m7 l4">
+            <div class="card white ">
+                <div class="card-image ">
+                    <img class="materialboxed" src="images\houston.jpg ">
+                    <span class="card-title ">Houston</span>
+                </div>
+                <div class="card-content ">
+                    <p class="card-img-text ">Houston (Listeni/ˈhjuːstən/ hyoo-stən) is the most populous city in Texas and the fourth-most populous city in the United States, located in Southeast Texas near the Gulf of Mexico. With a census-estimated 2014 population of 2.239 million[5] within a land area of 599.6 square miles (1,553 km2),[6] it also is the largest city in the Southern United States,[7] as well as the seat of Harris County. It is the principal city of Houston–The Woodlands–Sugar Land, which is the fifth-most populated metropolitan area in the United States.</p>
+                </div>
+                <div class="card-action" style="padding:2px 2px 2px 2em">
+                    Author: Pengyu Li &nbsp &nbsp Time: Sep 16 2016
+                </div>
+                <div class="card-action ">
+                    <button type="button " class="waves-effect waves-light btn-flat ">Comment</button>
+                    <button type="button " name="resume " class="waves-effect waves-light btn-flat ">Edit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m7 l4 ">
+            <div class="card white ">
+                <div class="card-image ">
+                    <img class="materialboxed" src="images\texas.png ">
+                    <span class="card-title ">Texas</span>
+                </div>
+                <div class="card-content ">
+                    <p class="card-img-text ">Texas (/ˈtɛksəs/, locally /ˈtɛksɨz/; Spanish: Texas or Tejas [ˈtexas]) is the second largest state in the United States by both area and population. Geographically located in the south central part of the country, Texas shares borders with the other US states of Louisiana to the east, Arkansas to the northeast, Oklahoma to the north, New Mexico to the west, and the Mexican states of Chihuahua, Coahuila, Nuevo León, and Tamaulipas to the southwest, while the Gulf of Mexico is to the southeast.</p>
+                </div>
+                <div class="card-action" style="padding:2px 2px 2px 2em">
+                    Author: Pengyu Li &nbsp &nbsp Time: Sep 16 2016
+                </div>
+                <div class="card-action ">
+                    <button type="button " class="waves-effect waves-light btn-flat ">Comment</button>
+                    <button type="button " name="resume " class="waves-effect waves-light btn-flat ">Edit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m7 l2"></div>
+    </div>
+    <div class="row">
+        <div class="col s12 m7 l2"></div>
+        <div class="col s12 m7 l4">
+            <div class="card white ">
+                <div class="card-content ">
+                    <span class="card-title ">Rice University statement on MOB performance</span>
+                    <p class="card-text ">The Marching Owl Band, or MOB, has a tradition of satirizing the Rice Owls’ football opponents. In this case, the band’s calling attention to the situation at Baylor was subject to many different interpretations. Although the band’s halftime shows are entirely the members’ projects with no prior review by the university administration, we regret any offense, particularly if Baylor fans may have felt unwelcome in our stadium. While we know that the MOB did not intend in any way to make light of the serious issue of sexual assault, we are concerned that some people may have interpreted the halftime performance in that vein. Sexual assault is a matter of serious concern on campuses across the nation, and all of us have an obligation to address the matter with all the tools at our disposal. The MOB sought to highlight the events at Baylor by satirizing the actions or inactions of the Baylor administration, but it is apparent from the comments of many spectators and Baylor fans that the MOB’s effort may have gone too far. - See more at: http://news.rice.edu/2016/09/17/rice-university-statement-on-mob-performance/#sthash.K8TMnqTg.dpuf</p>
+                </div>
+                <div class="card-action" style="padding:2px 2px 2px 2em">
+                    Author: Pengyu Li &nbsp &nbsp Time: Sep 16 2016
+                </div>
+                <div class="card-action ">
+                    <button type="button " class="waves-effect waves-light btn-flat ">Comment</button>
+                    <button type="button " name="resume " class="waves-effect waves-light btn-flat ">Edit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m7 l4">
+            <div class="card white ">
+                <div class="card-content ">
+                    <span class="card-title ">Improved microendoscope brings cervical cancer into focus</span>
+                    <p class="card-text ">HOUSTON — (Sept. 15, 2016) — Rice University researchers have added a clever spin — a rotating grating that removes out-of-focus light — to a cutting-edge, minimally invasive fiber-optic microscope that lets oncologists and surgeons zoom in on cancer tumors prior to surgery. Pelham Keahey with HRME Pelham Keahey (Photo by Jeff Fitlow/Rice University) The research is published online this week in the Early Edition of the Proceedings of the National Academy of Sciences.- See more at: http://news.rice.edu/2016/09/15/</p>
+                </div>
+                <div class="card-action" style="padding:2px 2px 2px 2em">
+                    Author: Pengyu Li &nbsp &nbsp Time: Sep 16 2016
+                </div>
+                <div class="card-action ">
+                    <button type="button " class="waves-effect waves-light btn-flat ">Comment</button>
+                    <button type="button " name="resume " class="waves-effect waves-light btn-flat ">Edit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m7 l2">
+        </div>
+    </div>
+</body>
+
+</html>

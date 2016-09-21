@@ -1,0 +1,23 @@
+{
+  "name": "hw3",
+  "version": "1.0.0",
+  "description": "A Facebook like social network prototype",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "surge -p dist",
+    "start": "cd dist && (python -m SimpleHTTPServer 8080 || python -m http.server 8080)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryulee/comp531.git"
+  },
+  "keywords": [
+    "Ricebook"
+  ],
+  "author": "Pengyu Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryulee/comp531/issues"
+  },
+  "homepage": "https://github.com/ryulee/comp531#readme"
+}

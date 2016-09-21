@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Profile Page</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Pengyu Li">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="profile.js"></script>
+</head>
+
+<body class="body-profile">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">RiceBook</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="main.html" class="tooltipped" data-activates="slide-out" id="sideNav" data-position="bottom" data-delay="50" data-tooltip="Main Page"><i class="material-icons">home</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="center-form-profile">
+        <div>
+            <img class="circle" style="height:100px;width:100px;margin:10px 10px 10px 10px" src="images/avatar.jpg">
+            <div class="file-field input-field">
+                <div class="btn" style="vertical-align: middle;width: 60px;height: 30px;text-align: center;line-height: 30px;margin-right: 10px;margin-top: 10px;margin-left: 8px;position:relative;top:-100px;left:160px">
+                    <span style="font-size:12px">Upload</span>
+                    <input type="file" style="height:30px;width:60px;margin-left:10px;margin-top:10px"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:40px">
+            <span class="profile-subtitle" style="position:relative;left:3%;top:-10px">Current Info</span>
+            <span class="profile-subtitle" style="position:relative;left:35%;top:-10px">Update Info</span>
+            <div class="row">
+                <div class="input-field col s6 m7 l3">
+                    <span class="span-info-left">Display Name:</span>
+                    <br>
+                    <span id="name_value" class="span-info-left">Pengyu Li</span>
+                </div>
+                <div class="input-field col s6 m7 l3">
+                    <span class="span-info-right">Email Address:</span>
+                    <br>
+                    <span id="email_value" class="span-info-right">ryulee2014@gmail.com</span>
+                </div>
+                <div class="input-field col s6 m7 l3">
+                    <input id="name" type="text" class="validate" placeholder="Should be mix of digit and word"></input>
+                    <label for="icon_prefix">Display Name</label>
+                </div>
+                <div class="input-field col s6 m7 l3">
+                    <input id="email" type="email" class="validate" placeholder="abc@abc.com"></input>
+                    <label for="icon_telephone">Email Address</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s6 m7 l3">
+                    <span class="span-info-left">Telephone:</span>
+                    <br>
+                    <span id="name_value" class="span-info-left">346-813-6257</span>
+                </div>
+                <div class="input-field col s6 m7 l3">
+                    <span class="span-info-right">Zipcode:</span>
+                    <br>
+                    <span id="email_value" class="span-info-right">77030</span>
+                </div>
+                <div class="input-field col s6 m7 l3">
+                    <input id="tel" type="text" class="validate" placeholder="xxx-xxx-xxxx">
+                    </input>
+                    <label for="icon_prefix">Telephone</label>
+                </div>
+                <div class="input-field col s6 m7 l3">
+                    <input id="zipcode" type="text" class="validate" placeholder="00000"></input>
+                    <label for="icon_telephone">Zipcode</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s6 m7 l3">
+                    <span class="span-info-left">Birthday:</span>
+                    <br>
+                    <span id="name_value" class="span-info-left">Sep 22, 1994</span>
+                </div>
+                <div class="input-field col s6 m7 l3">
+                </div>
+                <div class="input-field col s6 m7 l3">
+                    <input id="pwd" type="password" class="validate">
+                    <label for="icon_prefix">Password</label>
+                </div>
+                <div class="input-field col s6 m7 l3">
+                    <input id="pwdc" type="password" class="validate">
+                    <label for="icon_telephone">Password Confirmation</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                <input style="margin-left:50em;height:36px;width:80px" type="button" onclick="return validate()" class="waves-effect waves-light btn" value="Update"></input>
+            </div>
+        </div>
+</body>
+
+</html>

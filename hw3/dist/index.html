@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Pengyu Li">
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <title>Landing Page</title>
+</head>
+
+<body class="body-index">
+    <div class="login">
+        <div class="row">
+            <div class="input-field col s10">
+                Account:
+                <input id="loginAct" type="text" name="account" pattern="^[a-zA-Z]+.*$" required></input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s10">
+                Password:
+                <input id="loginPwd" type="password" name="password" pattern="^\w{5,12}$" required></input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="login-btn">
+                <input type="submit" class="waves-effect waves-light btn" name="login" value="Login" onclick="return loginValidation()"></input>
+                &nbsp
+                <input type="submit" class="waves-effect waves-light btn" name="register" value="Register" onclick="displayForm()"></input>
+            </div>
+        </div>
+    </div>
+    <div class="center-form">
+        <div class="row">
+            <form id="myForm" method="GET" action="main.html" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        Account Name:
+                        <input type="text" name="account" placeholder="ABC123" pattern="^[a-zA-Z]+.*$" required></input>
+                    </div>
+                    <div class="input-field col s6">
+                        Display Name(Optional):
+                        <input type="text" name="name" placeholder="xxx"></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        Email Address:
+                        <input type="email" name="email" placeholder="abc@abc.com" required></input>
+                    </div>
+                    <div class="input-field col s6">
+                        Phone:
+                        <input type="tel" name="phone" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="123-123-1234" required></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        Birthday:
+                        <input id="in1" type="date" name="bday" required></input>
+                    </div>
+                    <div class="input-field col s6">
+                        Zip Code(Five digits):
+                        <input type="number" name="zip" pattern="^\d{5}$" placeholder="00000" required></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        Password:(The length should be from 5 to 12.)
+                        <input type="password" name="password" pattern="^\w{5,12}$" required></input>
+                    </div>
+                    <div class="input-field col s6">
+                        Password Confirmation:
+                        <input type="password" name="confirmation" pattern="^\w{5,12}$" required></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <input id="in2" type="hidden" name="tstamp" value="default"></input>
+                    </div>
+                    <div style="margin:auto">
+                        <input type="submit" class="waves-effect waves-light btn" name="submit" value="Submit" onclick="return formValidate()"></input>
+                        &nbsp
+                        <input type="reset" class="waves-effect waves-light btn" name="clear" value="Clear"></input>
+                        &nbsp
+                        <input type="button" class="waves-effect waves-light btn" name="login" value="Login" onclick="undisplayForm()"></input>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">RiceBook</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+        </div>
+    </nav>
+</body>
+
+</html>
