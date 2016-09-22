@@ -1,6 +1,6 @@
 { 
      "netid": "pl26",
-  "frontend": "https://puffy-face.surge.sh",
+  "frontend": "https://puffy-face.surge.sh/dist",
   "account": "abc123",
   "password":"123456"
 }
