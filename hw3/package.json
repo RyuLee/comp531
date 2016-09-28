@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ryulee/comp531/issues"
   },
-  "homepage": "https://github.com/ryulee/comp531#readme"
+  "homepage": "https://github.com/ryulee/comp531#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0"
+  }
 }

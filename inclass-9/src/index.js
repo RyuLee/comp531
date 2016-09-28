@@ -31,7 +31,7 @@ function removeTask(e) {
 }
 
 function addItem(text) {
-    console.log("kakaka")
+    
     const newTODO = document.getElementById("newTODO")
     if (newTODO) {
         text = newTODO.value
