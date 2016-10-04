@@ -1,6 +1,5 @@
 var createApp = function(canvas) { 
-		var c = canvas.getContext("2d");
-
+	var c = canvas.getContext("2d")
 	// Create the ground
 	var floor = canvas.height/2
 	var grad = c.createLinearGradient(0,floor,0,canvas.height)
