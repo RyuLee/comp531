@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="author" content="Pengyu Li">
+    <title>Battle of Tanks</title>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="score-panel panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title" align="center">Score Board</h3>
+        </div>
+        <div id="score-board" class="panel-body" align="center">
+            0 pts
+        </div>
+    </div>
+    <div class="life-panel panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title" align="center">Your Life</h3>
+        </div>
+        <div  id="player-life" class="panel-body" align="center">
+            5
+        </div>
+    </div>
+    <canvas class="map" width="500" height="500">
+    </canvas>
+    <img src="images/Battle-city.png" class="title"></img>
+    <div class="info-panel panel panel-default ">
+        <div class="panel-heading">
+            <h3 class="panel-title">Game Description</h3>
+        </div>
+        <div class="panel-body">
+            The game is a copy of classic FC game, battle city. But being different from it, you don't need to defend your base. As time goes, the enemy will become more and more powerful. You should use more bullets to eliminate them. The more enemies you eliminate, more scores you would get. Enjoy it!
+        </div>
+    </div>
+    <div class="howtoplay-panel panel panel-default ">
+        <div class="panel-heading">
+            <h3 class="panel-title">How to Play</h3>
+        </div>
+        <div class="panel-body">
+            Use <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> to move up, move down, move left, move right, respectively. Use spacebar to fire bullet.
+        </div>
+    </div>
+    <button id="pause-btn" type="button" class="button-group-1 btn btn-default btn-lg" onclick="pause()">
+        <span id="pause-btn-icon" class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pause
+    </button>
+    <button type="button" class="button-group-2 btn btn-default btn-lg" onclick="reset()">
+        <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> Reset
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" style="display: none">Game End</button>
+    <div id="myModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Game End</h4>
+                </div>
+                <div class="modal-body">
+                    <p>You're defeated!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="replay-btn" type="button" class="btn btn-primary" onclick="reset()">Replay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

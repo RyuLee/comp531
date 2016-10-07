@@ -1,18 +1,26 @@
 {
   "name": "hw4",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "A BattleCity like js game",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "surge -p dist",
+    "start": "cd dist &&(python -m SimpleHTTPServer 8080 || python -m http.server 8080)"
   },
   "repository": {
     "type": "git",
-    "url": "https://www.github.com/ryulee/comp531"
+    "url": "git+https://github.com/ryulee/comp531.git"
   },
   "keywords": [
-    "game"
+    "Battle of Tanks"
   ],
   "author": "Pengyu Li",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryulee/comp531/issues"
+  },
+  "homepage": "https://github.com/ryulee/comp531#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0"
+  }
 }
