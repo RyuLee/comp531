@@ -1,0 +1,152 @@
+.body-index {
+    background-image: url("../images/background-index.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.body-main {
+    background-image: url("../images/background-main.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.body-profile {
+    background-image: url("../images/background-profile.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.center-form {
+    display: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 300px;
+}
+.center-form-profile {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-bottom: 200px;
+    width: 60%;
+}
+.profile-subtitle {
+	font-size: 25px;
+}
+.span-info-left {
+	position: relative;
+	top:-10px;
+	margin-left: 1em;
+}
+.span-info-right {
+	position: relative;
+	top:-10px;
+	margin-right: 1em;
+}
+.login {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 30%;
+}
+
+.btn {
+    background-color: #0089ec;
+    padding: 0 0.5em;
+}
+
+.btn:hover,
+.btn-large:hover {
+    background-color: #3682b8;
+}
+
+
+.login-btn {
+    padding: 0px 120px 20px;
+}
+
+nav {
+    position: fixed;
+    background-color: #0089ec;
+    padding-left: 1em;
+}
+
+nav ul {
+	margin: 0px 0px 0px 10em;
+}
+
+.bg {
+    background-color: #78909c;
+}
+
+table {
+    width: 60%;
+    margin: auto;
+}
+
+td {
+    width: 30em;
+    height: 30em;
+}
+
+th {
+    text-align: center
+}
+
+p {
+    font-color: white;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+}
+
+.text-area {}
+
+.container {
+    width: 10%;
+}
+
+.user {
+    width: 2%
+}
+
+.action {
+    width: 1%;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+
+.card-img-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.card-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 12;
+    -webkit-box-orient: vertical;
+}
+
+.search-bar {
+    margin-left: 70%;
+    margin-right: 10em;
+    top: 0px;
+}
+
+.input-field input[type=search]:focus {
+    background-color:#3682b8;
+}
+.side-activity {
+	height: auto;
+	width: 60%;
+}

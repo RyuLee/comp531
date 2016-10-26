@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/actions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">src</a> actions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>21/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.29% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>20/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</td><td class="line-coverage quiet"><span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Promise from 'bluebird'
+require('isomorphic-fetch')
+&nbsp;
+const isLocal = false
+export const apiUrl = i</span>sLocal ? <span class="branch-0 cbranch-no" title="branch not covered" >'http://localhost:5555' : 'https://webdev-dummy.herokuapp.com'
+&nbsp;
+const Action = {
+&nbsp;
+     ADD_ARTICLE: 'ADD_ARTICLE'
+    ,UPDATE_ARTICLES: 'UPDATE_ARTICLES'
+    ,EDIT_ARTICLE: 'EDIT_ARTICLE'
+    ,SEARCH_KEYWORD: 'SEARCH_KEYWORD'
+    ,UPDATE_AVATARS: 'UPDATE_AVATARS'
+&nbsp;
+    ,UPDATE_HEADLINE: 'UPDATE_HEADLINE'
+    ,UPDATE_PROFILE: 'UPDATE_PROFILE'
+&nbsp;
+    ,FOLLOWER_UPDATE: 'FOLLOWER_UPDATE'
+&nbsp;
+    ,ERROR: 'ERROR'
+    ,SUCCESS: 'SUCCESS'
+&nbsp;
+    ,NAV_PROFILE: 'NAV_PROFILE'
+    ,NAV_MAIN: 'NAV_MAIN'
+    ,NAV_OUT: 'NAV_OUT'
+&nbsp;
+    ,SIDE_OUT:'SIDE_OUT'
+&nbsp;
+    ,LOGIN_LOCAL: 'LOGIN_LOCAL'
+    ,LOGIN_GOOGLE: 'LOGIN_GOOGLE'
+    ,LOGIN_FACEBOOK: 'LOGIN_FACEBOOK'
+&nbsp;
+}
+&nbsp;
+export default Action
+&nbsp;
+export function updateError(error) { return { type: Action.ERROR, error }}
+export function updateSuccess(success) { return { type: Action.SUCCESS, success }}
+export function navToProfile() { return { type: Action.NAV_PROFILE }}
+export function navToMain() { return { type: Action.NAV_MAIN }}
+export function navToOut() { return { type: Action.NAV_OUT }}
+&nbsp;
+export function resource(method, endpoint, payload, submitJson = </span></span>true) <span class="branch-1 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >{
+    const options = {credentials: 'include', method}
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (submitJson) options.headers = {'Content-Type': 'application/json'}
+    if (payload) {
+        o</span>ptions.body = submitJson ? JSON.stringify(payload) : <span class="branch-1 cbranch-no" title="branch not covered" >payload
+    }
+    return fetch(`${apiUrl}/${endpoint}`, options)
+    .then((response) =&gt; {
+        if (response.status == 401) {
+            const message = `Unauthorized`
+            throw new Error(message)
+        } else {
+            return response.json()
+        }
+    })
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 26 2016 02:22:11 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
