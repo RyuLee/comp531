@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/article/newArticle.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/article</a> newArticle.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>3/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+&nbsp;
+import { uploadArticle } from './articleActions'
+&nbsp;
+&nbsp;
+class NewArticle extends Component {
+&nbsp;
+    handleImageChange(e) <span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        e.preventDefault()</span>
+&nbsp;
+        l</span>et reader = <span class="cstat-no" title="statement not covered" >new window.FileReader();
+<span class="cstat-no" title="statement not covered" >        reader.onloadend = <span class="fstat-no" title="function not covered" >() =&gt; </span>{</span>
+<span class="cstat-no" title="statement not covered" >            this.preview = reader.result</span>
+<span class="cstat-no" title="statement not covered" >            this.forceUpdate();</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.file = e.target.files[0];</span>
+<span class="cstat-no" title="statement not covered" >        if (typeof(this.file) == 'Blob')</span>
+<span class="cstat-no" title="statement not covered" >            reader.readAsDataURL(this.file)</span>
+    }
+&nbsp;
+    render() <span class="cstat-no" title="statement not covered" >{ <span class="cstat-no" title="statement not covered" >return (</span></span>
+        &lt;div&gt;
+            &lt;div className="row"&gt;
+                &lt;div className="col s12 "&gt;
+                    &lt;div&gt;Say something...&lt;/div&gt;
+                    &lt;textarea className="newPostBody" id="post"
+                      cols="80" rows="4" placeholder="share what's new..."
+                      value={ this.message }
+                      onChange={<span class="fstat-no" title="function not covered" >(</span>e) =&gt; {
+<span class="cstat-no" title="statement not covered" >                        this.message = e.target.value</span>
+<span class="cstat-no" title="statement not covered" >                        this.forceUpdate();</span>
+                    }}&gt;
+                    &lt;/textarea&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+&nbsp;
+            &lt;div className="row"&gt;
+                &lt;div className="col s12"&gt;
+                    Add a picture
+                    &lt;input type="file" id="articleImage" accept="image/*" onChange={<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>e) =&gt; this.handleImageChange(e)}/&gt;</span>
+                &lt;/div&gt;
+            { !this.file &amp;&amp; !this.message ? '' :
+                &lt;div className="col-sm-2"&gt;
+                    &lt;div className="text-right"&gt;
+                        &lt;input className="btn btn-primary" id="post-btn" type="button" value="Publish it"
+                            onClick={<span class="fstat-no" title="function not covered" >() =&gt; </span>{
+<span class="cstat-no" title="statement not covered" >                                this.props.dispatch(uploadArticle(this.message, this.file))</span>
+<span class="cstat-no" title="statement not covered" >                                this.message = ''</span>
+<span class="cstat-no" title="statement not covered" >                                this.file = undefined</span>
+<span class="cstat-no" title="statement not covered" >                                this.forceUpdate()</span>
+                            }}/&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            }
+            &lt;/div&gt;
+&nbsp;
+        { !this.file ? '' :
+            &lt;div className="row"&gt;
+                &lt;img className="postImage" src={this.preview}/&gt;
+                &lt;div&gt;
+                { this.file.webkitRelativePath || this.file.name }&lt;br/&gt;
+                ({ parseInt(this.file.size / 1024 * 100)/100.0 } kB)
+                &lt;/div&gt;
+            &lt;/div&gt;
+        }
+        &lt;/div&gt;
+    )}
+}
+&nbsp;
+export default connect()(NewArticle)
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Nov 09 2016 01:32:37 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
