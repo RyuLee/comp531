@@ -1,0 +1,17 @@
+
+> starter@1.0.0 e2e:base /Users/brilliant_yu/Workplace/Web/COMP/hw6/frontend
+> mocha --opts e2e/mocha.opts e2e/*.spec.js "--reporter" "xunit"
+
+You are not logged in
+<testsuite name="Mocha Tests" tests="11" failures="0" errors="0" skipped="0" timestamp="Tue, 08 Nov 2016 02:01:46 GMT" time="33.029">
+<testcase classname="End to end testing" name="should get the main page" time="0.526"/>
+<testcase classname="End to end testing" name="should post a new article" time="1.048"/>
+<testcase classname="End to end testing" name="should update the headline" time="2.427"/>
+<testcase classname="End to end testing" name="should search by keyword" time="1.117"/>
+<testcase classname="End to end testing" name="should add/remove a follower" time="5.367"/>
+<testcase classname="End to end testing" name="should navigate to profile" time="1.055"/>
+<testcase classname="End to end testing" name="should update email" time="2.562"/>
+<testcase classname="End to end testing" name="should update zipcode" time="3.18"/>
+<testcase classname="End to end testing" name="should update password" time="1.253"/>
+<testcase classname="End to end testing" name="should navigate to home" time="1.051"/>
+</testsuite>
