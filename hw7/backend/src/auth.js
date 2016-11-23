@@ -109,7 +109,7 @@ const isLoggedIn = (req,res,next) => {
 module.exports.auth = app => {
     app.post('/login',login)
     app.post('/register',register)
-    app.get('/logout',isLoggedIn,logout)
+    app.put('/logout',isLoggedIn,logout)
 }
 
 module.exports.isLoggedIn = isLoggedIn
