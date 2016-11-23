@@ -51,7 +51,7 @@ const register = (req,res) => {
 }
 
 const login = (req,res) => {
-    console.log("asdsad")
+    
     if(!req.body.username||!req.body.password){
         res.status(401).send('Unauthorized!')
         return
