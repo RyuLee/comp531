@@ -1,0 +1,13 @@
+1. Which presentation was the most polished and delivered,and why?
+A: I think user experience(#1) is interesting and insightful. 
+For user experience, the key points of how to build user-friendly 
+application are clear and addressed in presentation. 
+
+2. Which topic did you learn the most from and what did you learn?
+A: Create.js(#12) is very interesting and I have learnt a lot from that. 
+The demo makes me want to have a try after class.
+
+3. Which talk did you like the best and why?
+A: I like CSS framework(#7) best because it gave me a big picture of 
+different UI frameworks. Even the framework like Bootstrap is familiar to 
+me, but it still gave me lots of inspiration.
