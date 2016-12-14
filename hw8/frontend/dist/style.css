@@ -1,0 +1,178 @@
+.body-index {
+    background-image: url("./images/background-index.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.body-main {
+    background-image: url("./images/background-main.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.body-profile {
+    background-image: url("./images/background-profile.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.center-form {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 800px;
+}
+.center-form-profile {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-bottom: 200px;
+    width: 60%;
+}
+.profile-subtitle {
+	font-size: 25px;
+}
+.span-info-left {
+	position: relative;
+	top:-10px;
+	margin-left: 1em;
+}
+.span-info-right {
+	position: relative;
+	top:-10px;
+	margin-right: 1em;
+}
+.login {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 30%;
+}
+
+.btn {
+    background-color: #0089ec;
+    padding: 0 0.5em;
+}
+
+.btn:hover,
+.btn-large:hover {
+    background-color: #3682b8;
+}
+
+
+.login-btn {
+    padding: 0px 120px 20px;
+    margin-left: 60px;
+}
+
+nav {
+    position: fixed;
+    background-color: #0089ec;
+    
+}
+
+.bg {
+    background-color: #78909c;
+}
+
+table {
+    width: 60%;
+    margin: auto;
+}
+
+td {
+    width: 30em;
+    height: 30em;
+}
+
+th {
+    text-align: center
+}
+
+p {
+    font-color: white;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+}
+
+.text-area {}
+
+.container {
+    width: 10%;
+}
+
+.user {
+    width: 2%
+}
+
+.action {
+    width: 1%;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+
+.card-img-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.card-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 12;
+    -webkit-box-orient: vertical;
+}
+
+.search-bar {
+    margin-left: 70%;
+    margin-right: 10em;
+    top: 0px;
+}
+
+.input-field input[type=search]:focus {
+    background-color:#3682b8;
+}
+.side-activity {
+	height: auto;
+	width: 60%;
+}
+.h1={
+    position: relative;
+    width:30px;
+    height:20px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 8px}
+.h2{padding-top:1em;
+    vertical-align:text-bottom;
+    margin-left:15px}
+
+.h3{position:relative;margin-left: 1em;margin-top:40px;font-size: 20px}
+.h4{position:relative;margin-left:4em;width:70%;top:-60px}
+.h5{margin-left:20em;font-size:10px;position:relative;top:-70px}
+.h6{position: relative;margin-left: 30px; top: -80px}
+.circle-img-user{
+    position: relative;
+    height:80px;width:80px;
+    margin-top: 100px;
+}
+.circle-img{
+    height:40px;width:40px;
+}
+.side-img{
+    background-image: url("./images/material1.jpg");
+    background-repeat: repeat-y;
+    height: 100%;
+}

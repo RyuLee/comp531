@@ -1,0 +1,7 @@
+<testsuite name="Mocha Tests" tests="5" failures="0" errors="0" skipped="0" timestamp="Wed, 09 Nov 2016 07:38:31 GMT" time="0.304">
+<testcase classname="test for get article" name="should get at least 3 articles" time="0.221"/>
+<testcase classname="test for get article" name="should add articles" time="0.033"/>
+<testcase classname="test for get article" name="should get articles with len + 1" time="0.011"/>
+<testcase classname="Validate the function of profile.js" name="should get certain user's headline" time="0.008"/>
+<testcase classname="Validate the function of profile.js" name="should update certain user's headline" time="0.025"/>
+</testsuite>

@@ -1,0 +1,5 @@
+{ 
+     "netid": "pl26",
+  "frontend": "http://ryuleefinal.surge.sh/",
+  "backend": "https://ryuleefinal.herokuapp.com/"
+}

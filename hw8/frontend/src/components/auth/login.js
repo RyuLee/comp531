@@ -1,0 +1,35 @@
+import React from 'react'
+import { connect } from 'react-redux'
+
+import { localLogin } from './authActions'
+
+const Login = ({dispatch}) => {
+    let username, password
+    return (
+    <div id="foo" className="login">
+        <h5>Login</h5>
+        <div className="row">
+            <div className="input-field col s10">
+                Account:
+                <input id="username" type="text" name="account" pattern="^[a-zA-Z]+.*$" required ref={(node)=>{username = node}}></input>
+            </div>
+        </div>
+        <div className="row">
+            <div className="input-field col s10">
+                Password:
+                <input id="password" type="password" name="password" pattern="^\w{5,12}$" required ref={(node)=>{password = node}}></input>
+            </div>
+        </div>
+        <div className="row">  
+          
+          <div className="login-btn">
+                <input type="submit" className="waves-effect waves-light btn" name="login" id="login" value="Login" 
+                onClick={()=>{
+                    dispatch(localLogin(username.value,password.value))}}></input>
+            </div>
+            <a className="fb-login-btn" href="http://localhost:3000/login/facebook">Login by Facebook</a> 
+        </div>
+    </div>    )
+}
+
+export default connect()(Login)
